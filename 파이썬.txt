@@ -1,0 +1,70 @@
+divmod(a, b) : a를 b로 나눈 몫과 나머지
+---
+리스트(list)
+len(list) : list의 원소의 개수
+list[3] : list의 3번째 원소
+	※ 가장 처음 원소는 0번째 원소이다.
+list.remove('gentleman') : list에서 'gentleman' 원소를 제거
+for x in list:
+range(n) : 0 이상 n 미만의 정수
+range(a, b) : a 이상 b 미만의 정수
+range(a, b, step) : 공차가 step
+list(range(a, b)) : a 이상 b 미만의 정수로 이루어진 list 생성
+
+---
+인터프리터와 컴파일러
+비트(bit) : 0 또는 1
+저급 언어(low-level language) : 기계어, 어셈블리어
+고급 언어(high-level language) : C/C++, 파이썬, 자바 등
+인터프리트(interpret) : 실시간 통역 e.g. 파이썬
+	inter : 중간. 중간에 위치해서 실시간 통역
+컴파일(complie) : 한번에 통역
+	pile : 쌓음. 쌓아서 전체를 한번에 통역.
+---
+cmd에서 python 설치된 폴더로 이동
+where python으로 경로 확인 가능
+해당 위치에서 python (py 파일 경로) 입력하면 해당 py 파일 실행됨
+---
+input() : 사용자가 키보드로 입력한 모든 것을 문자열로 저장
+round() : 반올림
+---
+and/or 연산자는 좌항을 먼저 평가하고 우항은 필요할 때만 평가한다.
+가령 and 연산자일 때 좌항이 이미 false이면 결과는 우항을 계산해볼 필요 없이 false이다.
+---
+split() 메서드를 사용해 문자열을 분할한 리스트를 얻을 수 있다.
+'0 100'.split()
+-> ['0', '100']
+a, b = 'ant ball'.split()
+-> a = 'ant', b = 'ball'
+---
+match-case문
+for n in range(1, 51):
+    match (n % 3, n % 5):
+        case (0, 0):
+            print("피즈 버즈")
+        case (0, _):
+            print("피즈")
+        case (_, 0):
+            print("버즈")
+        case _:
+            print(n)
+case 문에서 _은 아무 값이나 상관없다는 뜻.
+---
+for-else와 while-else
+for x in [1, 2, 3, 4]:
+    if x > 2:
+        break
+    print(x)
+else:
+    print("끝")
+for문이 처음부터 break 없이 모두 진행되었을 때 else문 실행
+
+countdown = 5
+while countdown > 0:
+    print(countdown)
+    countdown -= 1
+    if input() == '중단':
+        break
+else:
+    print('발사!')
+while문 역시 break될 경우에는 else문이 실행되지 않음
